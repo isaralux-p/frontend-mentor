@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+/* ===== Color ===== */
+/*### Primary*/
+:root {
+    --red-background: hsl(0, 78%, 62%);
+    --cyan-bacground: hsl(180, 62%, 55%);
+    --orange-background: hsl(34, 97%, 64%);
+    --blue-background : hsl(212, 86%, 64%);
+}
+/*### Neutral*/
+:root {
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1, h2{
+    color: var(--very-dark-blue);
+}
+
+p{
+    color: var(--grayish-blue);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+}
+/*===== Header =====*/
+
+.header{
+    max-width: 460px;
+    margin:85px auto 0 auto;
+    text-align: center;
+    font-weight: 200;
+}
+.header-strong {
+    font-weight: 600;
+}
+
+.header-p {
+    margin: 10px auto 45px auto;
+    max-width: 520px;
+    text-align: center;
+}
+
+/*===== Body =====*/
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1140px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.box {
+    position: relative;
+    width: 350px;
+    background-color: #ffffff;
+    margin: 15px;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+}
+
+.image{
+    display: block;
+    margin-left: auto;
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    top:0 ;
+    left:0 ;
+}
+
+.box-transform{
+    transform: translateY(50%);
+}
+
+.p-box{
+   margin: 15px 0px 35px 0px; 
+}
+
+.red-tab::after {
+    background-color: var(--red-background);
+}
+
+.cyan-tab::after {
+    background-color: var(--cyan-bacground);
+}
+
+.blue-tab::after {
+    background-color: var(--blue-background);
+}
+
+.orange-tab::after {
+    background-color: var(--orange-background);
+}
+
+footer {
+    text-align: center;
+}
+/*===== Mobile =====*/
+
+@media (max-width: 775px){
+    .box-transform{
+        transform: translateY(0%);
+    }
+}
